@@ -1,0 +1,296 @@
+@import 'fonts';
+
+//глобальные стили, обычно записываю их в отдельный файл global
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 60px;
+}
+body{
+    background-image: url(../images/grunge.png);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+//глобальные стили, обычно записываю их в отдельный файл global
+
+//start of header
+.header {
+    min-height: 1000px;
+    background-color: #000;
+    padding-top: 55px;
+
+    &__desc {
+        max-width: 1800px;
+        height: 29px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: flex;
+        width: 400px;
+    }
+
+    &__burger-menu {
+        height: 18px;
+        width: 60px;
+        cursor: pointer;
+        margin: 7px 60px 4px 0px;
+    }
+
+    &__burger-wand {
+        height: 2px;
+        max-width: 60px;
+        width: 100%;
+        background-color: #F7F5F9;
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    &__menu-links {
+        display: flex;
+        width: 285px;
+        justify-content: space-between;
+        margin: 0;
+        align-items: center;
+    }
+
+    &__menu-item {
+        &+& {
+            margin-left: 40px;
+        }
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        font-family: 'MADE Outer Sans';
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: #F7F5F9;
+    }
+
+    &__logo-img {
+        width: 200px;
+        height: 33px;
+    }
+
+    &__control {
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__phone-link {
+        font-family: 'MADE Outer Sans';
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: #F7F5F9;
+        text-decoration: none;
+        margin: 3px 40px 8px 0px;
+    }
+
+    &__shop {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__shopping-cart {
+        width: 28px;
+        height: 28px;
+    }
+
+    &__vector {
+        position: absolute;
+        background-image: url(../images/Vector.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 22px;
+        color: #fff;
+        top: -12px;
+        left: 16px;
+        font-family: 'MADE Outer Sans';
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: #E50012;
+
+        &::after {
+            position: absolute;
+            content: '2';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__language-switcher {
+        margin: 3px 6px 8px 60px;
+        width: 56px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__language-btn {
+        width: 24px;
+        height: 18px;
+        font-family: 'MADE Outer Sans';
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        background-color: none;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.3);
+        padding: 0px;
+        cursor: pointer;
+
+        &+& {
+            margin-left: 8px;
+        }
+
+        &.active {
+            color: #F7F5F9;
+        }
+    }
+
+    &__rooms {
+        min-height: 800px;
+        margin-top: 57px;
+        position: relative;
+    }
+
+    &__rooms-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rooms-item {
+        max-width: 351.2px;
+        width: 100%;
+        height: 800px;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(../images/room1.png);
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        &--second {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(../images/room2.png);
+        }
+
+        &--third {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(../images/room3.png);
+        }
+
+        &--fourth {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(../images/room4.png);
+        }
+
+        &--fifth {
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 52.74%, rgba(17, 13, 13, 0.9) 100%), url(../images/room5.png);
+        }
+    }
+
+    &__rooms-title {
+        font-family: 'MADE Outer Sans';
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        display: flex;
+        align-items: flex-start;
+        color: #F7F5F9;
+        margin-top: 629px;
+        margin-left: 60px;
+        height: 72px;
+        max-width: 246px;
+        width: 100%;
+    }
+
+    &__rooms-subtitle {
+        font-family: 'MADE Outer Sans';
+        font-weight: normal;
+        font-weight: 250;
+        font-size: 14px;
+        line-height: 24px;
+        color: #F7F5F9;
+        margin-left: 60px;
+        position: relative;
+
+        &--mask {
+            &::after {
+                position: absolute;
+                content: url(../images/Mask.svg);
+                top: -4px;
+                left: 175px;
+            }
+        }
+    }
+
+    &__rooms-tape {
+        background-image: url(../images/tape.png);
+        width: 360px;
+        height: 81px;
+        position: absolute;
+        top: 27px;
+        left: -5px;
+        transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rooms-sale {
+        font-family: 'Morganite';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 56px;
+        text-transform: uppercase;
+        color: #F7F5F9;
+        transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+        margin-left: 25px;
+        padding-top: 13px;
+    }
+
+    &__rooms-timer {
+        font-family: MADE Outer Sans;
+        font-style: normal;
+        font-weight: 250;
+        font-size: 14px;
+        line-height: 24px;
+        color: #F7F5F9;
+        transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+        margin-top: 20px;
+        margin-right: 18px;
+    }
+
+    &__rooms-numbers {
+        display: block;
+        font-family: MADE Outer Sans;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 23px;
+        color: #F7F5F9;
+        transform: matrix(1, 0.01, -0.01, 1, 0, 0);
+        margin-left: 35px;
+    }
+}
+
+//end of header
